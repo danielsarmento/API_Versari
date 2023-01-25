@@ -1,9 +1,9 @@
 const SindicosCadastrados = require("../models/model_sindico");
 
 exports.createOne = async (req, res) => {
-    const{ nome, telefone, condominio, sindico} = req.body;
+    const{ nome, telefone, condominio} = req.body;
     try{
-        const sindico_cadastrado = await SindicosCadastrados.create({nome, telefone, condominio, sindico})
+        const sindico_cadastrado = await SindicosCadastrados.create({nome, telefone, condominio, sindico: true})
         return res.json({sindico_cadastrado});
     } catch (err) {
         res.status(500).send({ error: err.message });
