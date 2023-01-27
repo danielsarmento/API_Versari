@@ -16,12 +16,6 @@ routes.put("/cliente/editar", controller_clientes.updateOne);
 //Rota Boletos
 routes.post("/boletos", controller_boletos.solicitarBoleto);
 
-//Rotas Views
-/*
-routes.get('/', controller_views.home);
-routes.post('/criarSindico', controller_views.createSindico);
-*/
-
 module.exports = routes;
 
 
