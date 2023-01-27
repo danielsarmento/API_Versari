@@ -24,3 +24,18 @@ exports.searchOne = async (req, res) => {
         res.status(500).send({ error: err.message });
       };
 }
+
+exports.searchAll = async (req, res) => {
+    try{
+        const data = await SindicosCadastrados.find()
+
+        if(data == null){
+            return res.json(data);
+        }else {
+            return res.json(data);
+        }
+        
+    } catch (err) {
+        res.status(500).send({ error: err.message });
+      };
+}

@@ -6,6 +6,7 @@ const controller_boletos = require('../controllers/controller_boletos');
 // Rotas Sindicos
 routes.post("/create/sindicos", controller_sindicos.createOne);
 routes.post("/sindico", controller_sindicos.searchOne);
+routes.get("/sindico", controller_sindicos.searchAll);
 
 // Rotas Clientes
 routes.post("/create/clientes", controller_clientes.createOne);
